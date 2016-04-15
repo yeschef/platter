@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/fbmsghook', function(req, res) {
+router.get('/', function(req, res) {
 
 	if (req.query['hub.verify_token'] === 'hello-there') {
     	res.send(req.query['hub.challenge']);
